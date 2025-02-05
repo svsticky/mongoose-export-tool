@@ -1,0 +1,10 @@
+[package]
+name = "mongoose-export-tool"
+version = "0.1.0"
+edition = "2021"
+authors = ["Tobias de Bruijn <t.debruijn@array21.dev>"]
+license = "Apache-2.0 OR MIT"
+
+[dependencies]
+color-eyre = "0.6.3"
+time = { version = "0.3.37", features = ["formatting"] }
