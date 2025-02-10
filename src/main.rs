@@ -4,8 +4,9 @@ use time::{format_description, Date, Duration, OffsetDateTime, Weekday};
 fn main() -> Result<()> {
     color_eyre::install()?;
 
-    let period_end = get_monday();
-    let period_start = get_last_monday(&period_end);
+    // Period is inclusive on the start and end date
+    let period_end = get_monday() - Duration::days(1);
+    let period_start = get_last_monday(&get_monday());
 
     let url = format_url(period_start, period_end)?;
 
